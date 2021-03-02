@@ -1,46 +1,90 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  2 09:56:31 2021
+
+@author: jkran
+"""
+#this will be our chat bot GUI
+
 from tkinter import *
+#from chat import get_response, bot_name  #CHANGE THIS
 
-#this will be our chat bot gui
+BG_GREY = "#ABB2B9"
+BG_COLOR = "#17202A"
+TEXT_COLOR = "#EAECEE"
 
-#first we create a window
-window = Tk(className="Terminal")
-window.geometry("500x500")
-window.resizable(width=FALSE, height=FALSE)
+FONT = "HELVETICA 14"
+FONT_BOLD = "Helvetica 13 bold"
 
-title = Label(window, text="Psychiatrist_Bot_")
-title.pack()
-
-#create the main menu
-main_menu = Menu(window)
-
-# Create the submenu 
-file_menu = Menu(window)
-
-# Add commands to submenu
-file_menu.add_command(label="New..")
-file_menu.add_command(label="Save As..")
-file_menu.add_command(label="Exit")
-main_menu.add_cascade(label="File", menu=file_menu)
-#Add the rest of the menu options to the main menu
-main_menu.add_command(label="Edit")
-main_menu.add_command(label="Quit")
-window.config(menu=main_menu)
-
-#create a window for the conversation and place in parent window
-chatWindow = Text(window, bd=1, bg="black",  width="50", height="8", font=("Arial", 23), foreground="#00ffff")
-chatWindow.place(x=6,y=6, height=385, width=370)
-
-#create a text area for messages to be entered
-messageWindow = Text(window, bd=0, bg="black",width="30", height="4", font=("Arial", 23), foreground="#00ffff")
-messageWindow.place(x=128, y=400, height=88, width=260)
-
-#create scroll and place in parent window
-scrollbar = Scrollbar(window, command=chatWindow.yview, cursor="star")
-scrollbar.place(x=375,y=5, height=385)
-
-#create button to send messages
-Button= Button(window, text="Send",  width="12", height=5,
-                    bd=0, bg="#0080ff", activebackground="#00bfff",foreground='#ffffff',font=("Arial", 12))
-Button.place(x=6, y=400, height=88)
-
-window.mainloop()
+class ChatApplication:
+    
+    def __init__(self):
+        self.window = Tk()
+        self._setup_main_window()
+        
+    #how we start the application
+    def run(self):
+        self.window.mainloop()
+        
+    def _setup_main_window(self):
+        self.window.title("Thera-bot")
+        self.window.resizable(width=False, height=False)
+        self.window.configure(width=470,height=550, bg=BG_COLOR) #this is how we give our widgets different attributes
+        
+        #head label
+        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR, text="Welcome", font=FONT_BOLD, pady=10) #from tkinter library
+        head_label.place(relwidth=1)
+        
+        # tiny divider
+        line = Label(self.window, width=450, bg=BG_GREY)
+        line.place(relwidth=1, rely=0.07, relheight=0.012)
+        
+        #text widget
+        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=5, pady=5)
+        self.text_widget.place(relheight=0.745, relwidth=1, rely=0.08)
+        self.text_widget.configure(cursor="arrow", state=DISABLED)
+        
+        #scroll bar
+        scrollbar = Scrollbar(self.text_widget)
+        scrollbar.place(relheight=1, relx=0.974)
+        scrollbar.configure(command=self.text_widget.yview)#whenever we change the scrollbar it changes the y pos of text
+        
+        #bottom label
+        bottom_label = Label(self.window, bg=BG_GREY, height=80)
+        bottom_label.place(relwidth=1,rely=0.825)
+        
+        # message entry box
+        self.msg_entry = Entry(bottom_label, bg="#2C3E50",fg=TEXT_COLOR, font=FONT)
+        self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
+        self.msg_entry.focus() #when we start app this entry box is already selected
+        self.msg_entry.bind("<Return>", self._on_enter_pressed)
+        
+        #send button
+        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GREY, command=lambda: self._on_enter_pressed(None))
+        send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
+        
+        
+    def _on_enter_pressed(self,event):
+        msg = self.msg_entry.get()
+        self._insert_message(msg, "You")
+            
+    def _insert_message(self, msg, sender):
+        if not msg:
+            return 
+        
+        self.msg_entry.delete(0, END) #end constant from tkinter
+        msg1 = f"{sender}: {msg}\n\n"
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, msg1)
+        self.text_widget.configure(state=DISABLED)
+        
+        msg2 = f"{bot_name}: {get_response(msg)}\n\n"
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, msg2)
+        self.text_widget.configure(state=DISABLED)
+        
+        self.text_widget.see(END)#so we are always able to see the last message
+        
+if __name__ == "__main__":
+    app = ChatApplication()
+    app.run()
