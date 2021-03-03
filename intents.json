@@ -1,7 +1,7 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hello again!"],
          "context_set": ""
         },
         {"tag": "goodbye",
@@ -9,24 +9,29 @@
          "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
          "context_set": ""
         },
-        {"tag": "age",
-         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 18 years old!", "18 years young!"],
+        {"tag": "depression",
+         "patterns": ["I am feeling depressed", "I feel empty", "I think I am depressed", "I am experiencing depression"],
+         "responses": ["Would you like to hear some techniques to deal with depression?", "Depression huh, would you like to hear some coping techniques?"],
          "context_set": ""
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+         "responses": ["You can call me Thera-bot.", "I'm Thera-bot!", "My name is Thera-bot, the automated psychiatrist."],
          "context_set": ""
         },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+        {"tag": "loneliness",
+         "patterns": ["I feel alone", "I have no one to talk to", "Im lonely", "I have no friends", "I am experiencing loneliness", "Im alone"],
+         "responses": ["Would you like to hear some techniques to deal with loneliness?", "You can talk to me! Would you like some techniques to cope with loneliness?"],
          "context_set": ""
         },
-        {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+        {"tag": "stress",
+         "patterns": ["Im stressed out", "Im very angry", "Im mad", "I am so stressed", "I am full of stress", "I hate this"],
+         "responses": ["Would you like to hear some techniques to deal with stress?", "Calm down! Would you like some techniques to cope with stress?"],
+         "context_set": ""
+        },
+        {"tag": "info",
+         "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
+         "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
          "context_set": ""
         }
    ]
