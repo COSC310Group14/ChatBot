@@ -29,6 +29,16 @@
          "responses": ["Would you like to hear some techniques to deal with stress?", "Calm down! Would you like some techniques to cope with stress?"],
          "context_set": ""
         },
+        {"tag": "confirmation",
+         "patterns": ["yes please", "ok", "sure", "absolutely", "yes"],
+         "responses": ["you have said yes"],
+         "context_set": ""
+        },
+        {"tag": "decline",
+         "patterns": ["no", "nope", "no thanks"],
+         "responses": ["you have said no"],
+         "context_set": ""
+        },
         {"tag": "info",
          "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
          "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
