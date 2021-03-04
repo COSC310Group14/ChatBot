@@ -1,7 +1,11 @@
 from trainer import *
 from BotActionChart import *
+#from GuiControl import *
 
-prevTag = "test" #stores the previous input type from the user, used to handle the user saying yes or no
+#author: MichaelOdermatt
+
+bot_name = "Thera-bot"
+prevTag = '' #stores the previous input type from the user, used to handle the user saying yes or no
 errorString = "Sorry, I'm not sure what you are trying to say. Could you please try again."
 
 #predict with model
@@ -63,6 +67,31 @@ def isInputExplain(tag):
 
 def handleExplain():
 	inp = input("You: ")
-	print("Thanks for letting me know.");
+	return "Thanks for letting me know.";
 
-chat()
+def get_response(inp):
+	global prevTag
+	results = model.predict([bag_of_words(inp, words)])[0]
+	results_index = numpy.argmax(results)
+	tag = labels[results_index]
+	if results[results_index] > 0.7:
+		if isInputYesOrNo(tag):
+			return handleYesOrNoInput(tag, prevTag)
+			prevTag = ''
+		else:
+			for tg in data["intents"]:
+				if tg['tag'] == tag:
+					responses = tg['responses']
+
+			if isInputExplain(tag):
+				return handleExplain()
+			prevTag = tag
+			print(prevTag)
+			return random.choice(responses)
+	else:
+		return errorString
+
+#where the code starts
+#chat()
+#app = ChatApplication()
+#app.run()

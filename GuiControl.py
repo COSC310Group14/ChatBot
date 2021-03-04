@@ -7,7 +7,7 @@ Created on Tue Mar  2 09:56:31 2021
 #this will be our chat bot GUI
 
 from tkinter import *
-from chat import get_response, bot_name
+from main import get_response, bot_name, errorString
 
 BG_GREY = "#ABB2B9"
 BG_COLOR = "#17202A"
