@@ -39,6 +39,8 @@ def chat():
 						responses = tg['responses']
 
 				print(random.choice(responses))
+				if isInputExplain(tag):
+					handleExplain()
 				prevTag = tag
 			else:
 				print(errorString)
@@ -54,5 +56,13 @@ def handleYesOrNoInput(tag, previousTag):
 	except:
 		s = errorString
 	return s
+
+def isInputExplain(tag):
+	if tag == "explain":
+		return True
+
+def handleExplain():
+	inp = input("You: ")
+	print("Thanks for letting me know.");
 
 chat()

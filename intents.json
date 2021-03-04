@@ -44,6 +44,11 @@
          "responses": ["No problem!", "Dont mention it!", "No worries!", "For sure!"],
          "context_set": ""
         },
+        {"tag": "explain",
+         "patterns": ["i want to tell you something", "i need to tell you something", "i need to talk", "ive got something on my chest", "can i tell you something"],
+         "responses": ["Go ahead, I'm listening", "okay, I'm all ears.", "Please, tell me."],
+         "context_set": ""
+        },
         {"tag": "info",
          "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
          "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
