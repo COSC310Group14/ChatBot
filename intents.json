@@ -39,6 +39,11 @@
          "responses": ["you have said no"],
          "context_set": ""
         },
+        {"tag": "thanks",
+         "patterns": ["thank you", "thanks", "i appreciate it", "thanks so much", "thank you very much", "thank you so much"],
+         "responses": ["No problem!", "Dont mention it!", "No worries!", "For sure!"],
+         "context_set": ""
+        },
         {"tag": "info",
          "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
          "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
