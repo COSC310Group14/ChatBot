@@ -45,8 +45,38 @@
          "context_set": ""
         },
         {"tag": "explain",
-         "patterns": ["i want to tell you something", "i need to tell you something", "i need to talk", "ive got something on my chest", "can i tell you something"],
+         "patterns": ["i want to tell you something", "i need to tell you something", "i need to talk", "i have a problem", "ive got something on my chest", "can i tell you something"],
          "responses": ["Go ahead, I'm listening", "okay, I'm all ears.", "Please, tell me."],
+         "context_set": ""
+        },
+        {"tag": "causes",
+         "patterns": ["where do mental health problems come from", "what cuases mental health problems", "why do i have mental health problems", "why do i feel this way", "what is cuasing me to feel this way"],
+         "responses": ["Problems in mental health can stem from biological, social, and psychological issues that effect your life."],
+         "context_set": ""
+        },
+        {"tag": "whatToDo",
+         "patterns": ["what can i do to feel better", "what can i do to get help", "what should i do", "where can i go to get help", "who should i talk to"],
+         "responses": ["If you are struggling with mental health related problems, it is highly advised that you see a mental health professional, I can only do so much."],
+         "context_set": ""
+        },
+        {"tag": "howDoIKnow",
+         "patterns": ["how do i know if im unwell", "when should i seek help", "how do i know if i need help", "what are signs that im unwell", "when do i find help"],
+         "responses": ["If your beliefs and thoughts are impacting your day-to-day life negatively, its time to seek professional help!"],
+         "context_set": ""
+        },
+        {"tag": "nothingWorks",
+         "patterns": ["nothing is working", "i still feel terrible", "you are not helping", "support is not working", "i cant find help"],
+         "responses": ["Finding the right methods is a difficult process. Be open to new approaches and dont loose hope!"],
+         "context_set": ""
+        },
+        {"tag": "manageGrief",
+         "patterns": ["how can i manage grief", "something very bad happened", "i lost something close to me", "i lost my job", "i have no sense of security", "i have no stability"],
+         "responses": ["It sounds like you are experiencing grief. You should prioritize your own needs first and give yourself as much time to heal as you need."],
+         "context_set": ""
+        },
+        {"tag": "thinkingTraps",
+         "patterns": ["i always overthink", "im always in my own head", "i think too much", "my thoughts are always negative"],
+         "responses": ["It sounds like you are in a thinking trap. Try seperating your thoughts from actual events and challenge thoes thoughts."],
          "context_set": ""
         },
         {"tag": "info",
