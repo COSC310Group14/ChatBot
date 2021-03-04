@@ -1,0 +1,88 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hello again!"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "depression",
+         "patterns": ["I am feeling depressed", "I feel empty", "I think I am depressed", "I am experiencing depression"],
+         "responses": ["Would you like to hear some techniques to deal with depression?", "Depression huh, would you like to hear some coping techniques?"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["You can call me Thera-bot.", "I'm Thera-bot!", "My name is Thera-bot, the automated psychiatrist."],
+         "context_set": ""
+        },
+        {"tag": "loneliness",
+         "patterns": ["I feel alone", "I have no one to talk to", "Im lonely", "I have no friends", "I am experiencing loneliness", "Im alone"],
+         "responses": ["Would you like to hear some techniques to deal with loneliness?", "You can talk to me! Would you like some techniques to cope with loneliness?"],
+         "context_set": ""
+        },
+        {"tag": "stress",
+         "patterns": ["Im stressed out", "Im very angry", "Im mad", "I am so stressed", "I am full of stress", "I hate this"],
+         "responses": ["Would you like to hear some techniques to deal with stress?", "Calm down! Would you like some techniques to cope with stress?"],
+         "context_set": ""
+        },
+        {"tag": "confirmation",
+         "patterns": ["yes please", "ok", "sure", "absolutely", "yes"],
+         "responses": ["you have said yes"],
+         "context_set": ""
+        },
+        {"tag": "decline",
+         "patterns": ["no", "nope", "no thanks"],
+         "responses": ["you have said no"],
+         "context_set": ""
+        },
+        {"tag": "thanks",
+         "patterns": ["thank you", "thanks", "i appreciate it", "thanks so much", "thank you very much", "thank you so much"],
+         "responses": ["No problem!", "Dont mention it!", "No worries!", "For sure!"],
+         "context_set": ""
+        },
+        {"tag": "explain",
+         "patterns": ["i want to tell you something", "i need to tell you something", "i need to talk", "i have a problem", "ive got something on my chest", "can i tell you something"],
+         "responses": ["Go ahead, I'm listening", "okay, I'm all ears.", "Please, tell me."],
+         "context_set": ""
+        },
+        {"tag": "causes",
+         "patterns": ["where do mental health problems come from", "what cuases mental health problems", "why do i have mental health problems", "why do i feel this way", "what is cuasing me to feel this way"],
+         "responses": ["Problems in mental health can stem from biological, social, and psychological issues that effect your life."],
+         "context_set": ""
+        },
+        {"tag": "whatToDo",
+         "patterns": ["what can i do to feel better", "what can i do to get help", "what should i do", "where can i go to get help", "who should i talk to"],
+         "responses": ["If you are struggling with mental health related problems, it is highly advised that you see a mental health professional, I can only do so much."],
+         "context_set": ""
+        },
+        {"tag": "howDoIKnow",
+         "patterns": ["how do i know if im unwell", "when should i seek help", "how do i know if i need help", "what are signs that im unwell", "when do i find help"],
+         "responses": ["If your beliefs and thoughts are impacting your day-to-day life negatively, its time to seek professional help!"],
+         "context_set": ""
+        },
+        {"tag": "nothingWorks",
+         "patterns": ["nothing is working", "i still feel terrible", "you are not helping", "support is not working", "i cant find help"],
+         "responses": ["Finding the right methods is a difficult process. Be open to new approaches and dont loose hope!"],
+         "context_set": ""
+        },
+        {"tag": "manageGrief",
+         "patterns": ["how can i manage grief", "something very bad happened", "i lost something close to me", "i lost my job", "i have no sense of security", "i have no stability"],
+         "responses": ["It sounds like you are experiencing grief. You should prioritize your own needs first and give yourself as much time to heal as you need."],
+         "context_set": ""
+        },
+        {"tag": "thinkingTraps",
+         "patterns": ["i always overthink", "im always in my own head", "i think too much", "my thoughts are always negative"],
+         "responses": ["It sounds like you are in a thinking trap. Try seperating your thoughts from actual events and challenge thoes thoughts."],
+         "context_set": ""
+        },
+        {"tag": "info",
+         "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
+         "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
+         "context_set": ""
+        }
+   ]
+}
