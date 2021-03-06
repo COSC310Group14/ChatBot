@@ -123,6 +123,32 @@
          "patterns": ["i study too much", "i'm always at school", "i'm always thinking about school"],
          "responses": ["How does this make you feel?"],
          "context_set": ""
-        }
+        },
+        {"tag": "progress",
+         "patterns": ["how do i know if i'm improving", "how do i know my progress", "how do i know if i'm getting worse"],
+         "responses": ["You should experience improvments in a few week if you continue communicating"],
+         "context_set": ""
+        },
+        {"tag": "next",
+         "patterns": ["what should i do next", "what are next steps", "what should i do after this"],
+         "responses": ["You should contact professional help"],
+         "context_set": ""
+        },
+        {"tag": "medication",
+         "patterns": ["should i take medication", "what medication should i take", "is there any medication"],
+         "responses": ["You should contact professional help and ask them about this"],
+         "context_set": ""
+        },
+        {"tag": "help",
+         "patterns": ["i need help", "i'm not okay", "help"],
+         "responses": ["You should contact professional help!"],
+         "context_set": ""
+        },
+        {"tag": "trauma",
+         "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
+         "responses": ["tell me about your feelings during this situation"],
+         "context_set": ""
+        },
+        
    ]
 }
