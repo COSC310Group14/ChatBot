@@ -83,6 +83,46 @@
          "patterns": ["what are you", "what do you do", "what is your purpose", "what is your job"],
          "responses": ["Im an automated psychiatrist, I was designed to help guide you to other mental heath resources", "Im a psychiatrist, an automated psychiatrist, desiged to help you!"],
          "context_set": ""
+        },
+        {"tag": "happiness",
+         "patterns": ["i'm not happy", "can i be happy", "i am never happy", "I haven't been happy"],
+         "responses": ["It sounds like you are not feeling well, tell me more about your feelings"],
+         "context_set": ""
+        },
+        {"tag": "sleep",
+         "patterns": ["i can't sleep", "i never sleep", "i'm too tired", "i can't fall asleep"],
+         "responses": ["It sounds like you are not sleeping enough, what do you think is causing this?"],
+         "context_set": ""
+        },
+        {"tag": "eating",
+         "patterns": ["i can't eat", "i'm never hungry", "i don't eat"],
+         "responses": ["It sounds like you are not eating enough, what do you think is causing this?"],
+         "context_set": ""
+        },
+        {"tag": "bored",
+         "patterns": ["i don't want to do anything", "i'm always bored'", "i'm not interested in anything"],
+         "responses": ["It sounds like you are bored, but what do you think is causing this?"],
+         "context_set": ""
+        },
+        {"tag": "voices",
+         "patterns": ["i'm hearing voices", "there are voices in my head", "i'm getting wierd ideas"],
+         "responses": ["What are this voices saying?"],
+         "context_set": ""
+        },
+        {"tag": "paranoia",
+         "patterns": ["i'm scared all the time", "i'm afraid to go out", "i'm scared of people"],
+         "responses": ["Have you recently experienced a traumatic event?"],
+         "context_set": ""
+        },
+        {"tag": "work",
+         "patterns": ["i work too much", "i'm always at work", "i'm always thinking about work"],
+         "responses": ["How does this make you feel?"],
+         "context_set": ""
+        },
+        {"tag": "school",
+         "patterns": ["i study too much", "i'm always at school", "i'm always thinking about school"],
+         "responses": ["How does this make you feel?"],
+         "context_set": ""
         }
    ]
 }
