@@ -16,6 +16,8 @@ TEXT_COLOR = "#EAECEE"
 FONT = "HELVETICA 14"
 FONT_BOLD = "Helvetica 13 bold"
 
+# this class creates the chatbot window using the tkinter library.
+# it imports get_response, bot_name, errorString from main.py which processes user input and porvides a response
 class ChatApplication:
     
     def __init__(self):
@@ -63,11 +65,12 @@ class ChatApplication:
         send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GREY, command=lambda: self._on_enter_pressed(None))
         send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
         
-        
+     # user clicks enter and message is sent    
     def _on_enter_pressed(self,event):
         msg = self.msg_entry.get()
         self._insert_message(msg, "You")
             
+     #  displays response and assigns displays the nameof the sender
     def _insert_message(self, msg, sender):
         if not msg:
             return 
