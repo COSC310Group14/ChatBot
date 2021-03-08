@@ -22,6 +22,8 @@ def bag_of_words(s, words):
 
 	return numpy.array(bag)
 
+# initiates the conversation and predicts passes the input to the model. It predicts which type of response to give
+# and chooses one randomly from the selected words. 
 def chat():
 	print("Start talking with the bot (type quit to exit)!")
 	while True:

@@ -1,5 +1,7 @@
 #made with vide series: https://www.youtube.com/watch?v=wypVcNIH6D4&list=PLzMcBGfZo4-ndH9FoC4YWHGXG5RZekt-Q
 
+# utilizes tokenization from the nltk library in order to break down input and tensorflow to create a deep learning model
+# that predicts what the user input means and then it is able to get a list of the possible responses from the json file. 
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
