@@ -148,7 +148,7 @@
          "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
          "responses": ["tell me about your feelings during this situation"],
          "context_set": ""
-        },
+        }
         
    ]
 }
