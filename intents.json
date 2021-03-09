@@ -1,7 +1,12 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hello again!"],
+         "context_set": ""
+        },
+        {"tag": "howAreYou",
+         "patterns": ["how are you today", "how is it going", "how have you been", "whats poppin", "Whats up", "whats shaking"],
+         "responses": ["I'm doing very well thank you!", "I'm great! thanks for asking.", "I'm doing very well", "My day has been great so far!"],
          "context_set": ""
         },
         {"tag": "goodbye",
@@ -86,7 +91,7 @@
         },
         {"tag": "happiness",
          "patterns": ["i'm not happy", "can i be happy", "i am never happy", "I haven't been happy"],
-         "responses": ["It sounds like you are not feeling well, tell me more about your feelings"],
+         "responses": ["Dont worry, not everyone can feel happy all the time. However if this is the case more often than not, maybe you should seek professional help."],
          "context_set": ""
         },
         {"tag": "sleep",
