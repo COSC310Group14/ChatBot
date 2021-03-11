@@ -133,21 +133,6 @@
          "patterns": ["what should i do next", "what are next steps", "what should i do after this"],
          "responses": ["You should contact professional help"],
          "context_set": ""
-        },
-        {"tag": "medication",
-         "patterns": ["should i take medication", "what medication should i take", "is there any medication"],
-         "responses": ["You should contact professional help and ask them about this"],
-         "context_set": ""
-        },
-        {"tag": "help",
-         "patterns": ["i need help", "i'm not okay", "help"],
-         "responses": ["You should contact professional help!"],
-         "context_set": ""
-        },
-        {"tag": "trauma",
-         "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
-         "responses": ["tell me about your feelings during this situation"],
-         "context_set": ""
-        } 
+        }
    ]
 }
