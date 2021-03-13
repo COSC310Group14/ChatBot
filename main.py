@@ -5,7 +5,7 @@ from BotActionChart import *
 #author: MichaelOdermatt
 
 bot_name = "Thera-bot"
-prevTag = '' #stores the previous input type from the user, used to handle the user saying yes or no
+prevTag = 'None' #stores the previous input type from the user, used to handle the user saying yes or no
 errorString = "Sorry, I'm not sure what you are trying to say. Could you please try again."
 
 #predict with model
@@ -57,10 +57,12 @@ def isInputYesOrNo(tag):
 		return True
 
 def handleYesOrNoInput(tag, previousTag):
+	global prevTag
 	try:
 		s = actionChart[previousTag][tag]
 	except:
 		s = errorString
+	prevTag = 'None'
 	return s
 
 def isInputExplain(tag):
@@ -78,8 +80,8 @@ def get_response(inp):
 	tag = labels[results_index]
 	if results[results_index] > 0.7:
 		if isInputYesOrNo(tag):
+			print(prevTag)
 			return handleYesOrNoInput(tag, prevTag)
-			prevTag = ''
 		else:
 			for tg in data["intents"]:
 				if tg['tag'] == tag:

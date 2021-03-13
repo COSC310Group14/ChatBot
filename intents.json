@@ -1,7 +1,12 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Hello again!"],
+         "context_set": ""
+        },
+        {"tag": "howAreYou",
+         "patterns": ["how are you today", "how is it going", "how have you been", "whats poppin", "Whats up", "whats shaking"],
+         "responses": ["I'm doing very well thank you!", "I'm great! thanks for asking.", "I'm doing very well", "My day has been great so far!"],
          "context_set": ""
         },
         {"tag": "goodbye",
@@ -86,52 +91,52 @@
         },
         {"tag": "happiness",
          "patterns": ["i'm not happy", "can i be happy", "i am never happy", "I haven't been happy"],
-         "responses": ["It sounds like you are not feeling well, tell me more about your feelings"],
+         "responses": ["Dont worry, not everyone can feel happy all the time. However if this is the case more often than not, maybe you should seek professional help."],
          "context_set": ""
         },
         {"tag": "sleep",
          "patterns": ["i can't sleep", "i never sleep", "i'm too tired", "i can't fall asleep"],
-         "responses": ["It sounds like you are not sleeping enough, what do you think is causing this?"],
+         "responses": ["It sounds like you are not sleeping enough, a typical cause for sleeplessness is anxiety which would be best treated by a professional. However you could use over-the-counter medications as a short-term cure."],
          "context_set": ""
         },
         {"tag": "eating",
          "patterns": ["i can't eat", "i'm never hungry", "i don't eat"],
-         "responses": ["It sounds like you are not eating enough, what do you think is causing this?"],
+         "responses": ["It sounds like you are not eating enough, a typical cause for sleeplessness is anxiety which would be best treated by a professional."],
          "context_set": ""
         },
         {"tag": "bored",
          "patterns": ["i don't want to do anything", "i'm always bored'", "i'm not interested in anything"],
-         "responses": ["It sounds like you are bored, but what do you think is causing this?"],
+         "responses": ["How often is this the case? It is possible that you may just be experiencing boredom which might not be a serious issue at all. Try keeping track of how often you feel this way."],
          "context_set": ""
         },
         {"tag": "voices",
          "patterns": ["i'm hearing voices", "there are voices in my head", "i'm getting wierd ideas"],
-         "responses": ["What are this voices saying?"],
+         "responses": ["You are hearing voices? You may be experiencing a product of past severe trauma. However, voices are also a sign of early onset schizophrenia, I suggest seeking professional as soon as you can. "],
          "context_set": ""
         },
         {"tag": "paranoia",
          "patterns": ["i'm scared all the time", "i'm afraid to go out", "i'm scared of people"],
-         "responses": ["Have you recently experienced a traumatic event?"],
+         "responses": ["Paranoia can be a prodcut of many mental disorders. If it is severe I would suggest seeking professional help as soon as you can."],
          "context_set": ""
         },
         {"tag": "work",
          "patterns": ["i work too much", "i'm always at work", "i'm always thinking about work"],
-         "responses": ["How does this make you feel?"],
+         "responses": ["You feel you work to much? This may be something as simple as a mid-life crisis. Perhaps its time for change in your life?"],
          "context_set": ""
         },
         {"tag": "school",
          "patterns": ["i study too much", "i'm always at school", "i'm always thinking about school"],
-         "responses": ["How does this make you feel?"],
+         "responses": ["Students often find themselves stressed and exhausted from their studies. I suggest speaking with an academic advisor or mental health professional if this feeling persists."],
          "context_set": ""
         },
         {"tag": "progress",
          "patterns": ["how do i know if i'm improving", "how do i know my progress", "how do i know if i'm getting worse"],
-         "responses": ["You should experience improvments in a few week if you continue communicating"],
+         "responses": ["The road to mental health recovery is anything but straight, you will experience both ups and downs. If this feeling worsens I suggest speaking to a mental health professional."],
          "context_set": ""
         },
         {"tag": "next",
          "patterns": ["what should i do next", "what are next steps", "what should i do after this"],
-         "responses": ["You should contact professional help"],
+         "responses": ["You should contact professional help."],
          "context_set": ""
         },
         {"tag": "medication",
@@ -146,7 +151,7 @@
         },
         {"tag": "trauma",
          "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
-         "responses": ["tell me about your feelings during this situation"],
+         "responses": ["Its best if you speak to a real mental health professional about traumatic events as they can be nuanced and many important factors in recovery can be overlooked."],
          "context_set": ""
         } 
    ]
