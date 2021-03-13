@@ -71,7 +71,7 @@ def isInputExplain(tag):
 
 def handleExplain():
 	inp = input("You: ")
-	return "Thanks for letting me know.";
+	return "Thanks for letting me know."
 
 def get_response(inp):
 	global prevTag

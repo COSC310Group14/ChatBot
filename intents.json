@@ -153,7 +153,6 @@
          "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
          "responses": ["Its best if you speak to a real mental health professional about traumatic events as they can be nuanced and many important factors in recovery can be overlooked."],
          "context_set": ""
-        }
-        
+        } 
    ]
 }
