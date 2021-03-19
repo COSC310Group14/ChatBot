@@ -4,6 +4,7 @@ Created on Fri Mar 19 12:12:47 2021
 
 @author: jkran
 """
+
 #Synonyms can be used to improve upon the accuracy of the FAQ part of the chatbot.
 #By adding the synonyms one can answer the questions asked by the user that don’t really match the questions fed by you.
 #This way, your bot can identify the intent and provide the right answer even when the question asked is not an exact match.
