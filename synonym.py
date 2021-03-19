@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 19 12:12:47 2021
-
-@author: jkran
-"""
+#Synonym recognition using WordNet
+#author: Joshua Kranabetter
 
 #Synonyms can be used to improve upon the accuracy of the FAQ part of the chatbot.
 #By adding the synonyms one can answer the questions asked by the user that don’t really match the questions fed by you.
