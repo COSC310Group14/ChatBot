@@ -6,7 +6,7 @@ from BotActionChart import *
 
 bot_name = "Thera-bot"
 prevTag = 'None' #stores the previous input type from the user, used to handle the user saying yes or no
-errorString = "Sorry, I'm not sure what you are trying to say. Could you please try again."
+errorString = ["I'm afraid I don't know what you mean.", "What was that?", "Could you trying saying that again?", "Sorry, my systems are limited. Could you try again?", "I'm not sure I understand"]
 
 #predict with model
 def bag_of_words(s, words):
@@ -49,7 +49,7 @@ def chat():
 					handleExplain()
 				prevTag = tag
 			else:
-				print(errorString)
+				print(getErrorString())
 
 def isInputYesOrNo(tag):
 	keyTags = ["confirmation", "decline"]
@@ -61,7 +61,7 @@ def handleYesOrNoInput(tag, previousTag):
 	try:
 		s = actionChart[previousTag][tag]
 	except:
-		s = errorString
+		s = getErrorString()
 	prevTag = 'None'
 	return s
 
@@ -72,6 +72,9 @@ def isInputExplain(tag):
 def handleExplain():
 	inp = input("You: ")
 	return "Thanks for letting me know."
+
+def getErrorString():
+	return random.choice(errorString)
 
 def get_response(inp):
 	global prevTag
@@ -93,7 +96,7 @@ def get_response(inp):
 			print(prevTag)
 			return random.choice(responses)
 	else:
-		return errorString
+		return getErrorString()
 
 #where the code starts
 #chat()
