@@ -42,7 +42,7 @@ class ChatApplication:
         line.place(relwidth=1, rely=0.07, relheight=0.012)
         
         #text widget
-        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=5, pady=5)
+        self.text_widget = Text(self.window, width=20, height=2, wrap=WORD,bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=5, pady=5)
         self.text_widget.place(relheight=0.745, relwidth=1, rely=0.08)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
         
