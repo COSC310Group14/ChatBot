@@ -18,7 +18,7 @@ In order to run the chat bot the user must install the following libraries nltk,
 ## Machine Learning
 Machine Learning was used to train a model which can recognize certain patterns and words used in user input. This provides much more flexibility within the system when attempting to interpret these inputs. The bot is able to take the user input and estimate if what the user has said falls into one if its predefined categories that it knows how to respond to. For example, when given the input "I am Lonely" the bot will compare this statement with all its training data, searching for keywords and example statements in each response category with similar sentence structure. Once it has done this it will produce a percentage for each response category. This percentage represents the input statements similarity to the sentences in that category. Finally, it picks the category with the highest percentage similarity and depending on the category, it grabs a pre-written response to print to the user.
 
-The model is traind with TensorFlow's Natural Language Toolkit.
+The model is traind with TensorFlow's Natural Language Toolkit. Source: https://www.youtube.com/playlist?list=PLzMcBGfZo4-ndH9FoC4YWHGXG5RZekt-Q
 
 ![Screenshot](mlExample.PNG)
 
