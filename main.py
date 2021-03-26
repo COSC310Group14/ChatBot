@@ -102,7 +102,7 @@ def get_response(inp):
                 print(prevTag)
                 return random.choice(responses)
     ## if we have iterated through all possible synonimous options we return error string
-    return errorString
+    return getErrorString()
 
 
 #where the code starts
