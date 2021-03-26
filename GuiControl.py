@@ -9,12 +9,14 @@ Created on Tue Mar  2 09:56:31 2021
 from tkinter import *
 from main import get_response, bot_name, errorString
 
-BG_GREY = "#ABB2B9"
-BG_COLOR = "#17202A"
-TEXT_COLOR = "#EAECEE"
+BOTTOM_COLOR = "white"
+BG_COLOR = "#93B7BE"
+TEXT_COLOR = "black"
+BUTTON_COLOR = "#BDC2C9"
+TEXTBOX_COLOR = "#BDC2C9"
 
-FONT = "HELVETICA 14"
-FONT_BOLD = "Helvetica 13 bold"
+FONT = "ARIAL 14"
+FONT_BOLD = "ARIAL 13 bold"
 
 # this class creates the chatbot window using the tkinter library.
 # it imports get_response, bot_name, errorString from main.py which processes user input and porvides a response
@@ -31,15 +33,16 @@ class ChatApplication:
     def _setup_main_window(self):
         self.window.title("Thera-bot")
         self.window.resizable(width=False, height=False)
-        self.window.configure(width=470,height=550, bg=BG_COLOR) #this is how we give our widgets different attributes
+        #this is how we give our widgets different attributes
+        self.window.configure(width=500,height=600, bg=BG_COLOR) 
         
         #head label
         head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR, text="Welcome", font=FONT_BOLD, pady=10) #from tkinter library
         head_label.place(relwidth=1)
         
         # tiny divider
-        line = Label(self.window, width=450, bg=BG_GREY)
-        line.place(relwidth=1, rely=0.07, relheight=0.012)
+        #line = Label(self.window, width=450, bg=BOTTOM_COLOR)
+        #line.place(relwidth=1, rely=0.07, relheight=0.012)
         
         #text widget
         self.text_widget = Text(self.window, width=20, height=2, wrap=WORD,bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, padx=5, pady=5)
@@ -52,17 +55,17 @@ class ChatApplication:
         scrollbar.configure(command=self.text_widget.yview)#whenever we change the scrollbar it changes the y pos of text
         
         #bottom label
-        bottom_label = Label(self.window, bg=BG_GREY, height=80)
+        bottom_label = Label(self.window, bg=BOTTOM_COLOR, height=80)
         bottom_label.place(relwidth=1,rely=0.825)
         
         # message entry box
-        self.msg_entry = Entry(bottom_label, bg="#2C3E50",fg=TEXT_COLOR, font=FONT)
+        self.msg_entry = Entry(bottom_label, bg=TEXTBOX_COLOR,fg=TEXT_COLOR, font=FONT)
         self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
         self.msg_entry.focus() #when we start app this entry box is already selected
         self.msg_entry.bind("<Return>", self._on_enter_pressed)
         
         #send button
-        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GREY, command=lambda: self._on_enter_pressed(None))
+        send_button = Button(bottom_label, text="Enter", font=FONT_BOLD, width=20, bg=BUTTON_COLOR, command=lambda: self._on_enter_pressed(None))
         send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
         
      # user clicks enter and message is sent    
