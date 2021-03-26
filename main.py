@@ -79,27 +79,27 @@ def get_response(inp):
     synonimousPhrases = findSynonyms(inp)
     synonimousPhrases.insert(0, inp)
 
-    
-    global prevTag
-    results = model.predict([bag_of_words(inp, words)])[0]
-    results_index = numpy.argmax(results)
-    tag = labels[results_index]
-    if results[results_index] > 0.7:
-        if isInputYesOrNo(tag):
-            print(prevTag)
-            return handleYesOrNoInput(tag, prevTag)
-        else:
-            for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
+    for phrase in synonimousPhrases:
+        global prevTag
+        results = model.predict([bag_of_words(phrase, words)])[0]
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+        if results[results_index] > 0.7:
+            if isInputYesOrNo(tag):
+                print(prevTag)
+                return handleYesOrNoInput(tag, prevTag)
+            else:
+                for tg in data["intents"]:
+                    if tg['tag'] == tag:
+                        responses = tg['responses']
 
-            if isInputExplain(tag):
-                return handleExplain()
-            prevTag = tag
-            print(prevTag)
-            return random.choice(responses)
-    else:
-        return errorString
+                if isInputExplain(tag):
+                    return handleExplain()
+                prevTag = tag
+                print(prevTag)
+                return random.choice(responses)
+    ## if we have iterated through all possible synonimous options we return error string
+    return errorString
 
 #where the code starts
 #chat()
