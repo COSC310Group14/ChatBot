@@ -7,7 +7,7 @@ from BotActionChart import *
 
 bot_name = "Thera-bot"
 prevTag = 'None' #stores the previous input type from the user, used to handle the user saying yes or no
-errorString = "Sorry, I'm not sure what you are trying to say. Could you please try again."
+errorString = ["I'm afraid I don't know what you mean.", "What was that?", "Could you trying saying that again?", "Sorry, my systems are limited. Could you try again?", "I'm not sure I understand"]
 
 #predict with model
 def bag_of_words(s, words):
@@ -32,7 +32,6 @@ def chat():
         if inp.lower() == "quit":
             break
 
-
         results = model.predict([bag_of_words(inp, words)])[0]
         results_index = numpy.argmax(results)
         tag = labels[results_index]
@@ -51,6 +50,7 @@ def chat():
                 prevTag = tag
             else:
                 print(errorString)
+
 
 def isInputYesOrNo(tag):
     keyTags = ["confirmation", "decline"]
@@ -73,6 +73,9 @@ def isInputExplain(tag):
 def handleExplain():
     inp = input("You: ")
     return "Thanks for letting me know."
+
+def getErrorString():
+	return random.choice(errorString)
 
 def get_response(inp):
     #find synonyms
@@ -100,6 +103,7 @@ def get_response(inp):
                 return random.choice(responses)
     ## if we have iterated through all possible synonimous options we return error string
     return errorString
+
 
 #where the code starts
 #chat()
