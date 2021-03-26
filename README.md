@@ -18,13 +18,25 @@ In order to run the chat bot the user must install the following libraries nltk,
 ## Machine Learning
 todo
 
+explain briefly how you used that feature to improve your
+agent's conversation or your overall system
+
+[give a snippet of a conversation that demonstrates your feature]
+
 ## Synonym Recognition
 Synonyms are used to improve upon the accuracy of the chatbot. By adding the synonyms one can answer the questions asked by the user that don’t really match the questions fed by you. This way, the bot can identify the intent and provide the right answer even when the question asked is not an exact match. For example if the user enters " I am feeling gloomy", the bot is not hardcoded to find the word gloomy and relate it to depression, but the synonym recognition script will find all the synonyms of gloomy and iterate through those synonimous phrases until it can understand something. In this case the phrase understood by the bot would be " I am feeling depressed".
 
 The synonym recognition is done via the nltk + the WordNet toolkit. The script runs synonym recognition for each word in the string and generates a list of synonimous phrases.
 Source: https://wordnet.princeton.edu/
 
+[give a snippet of a conversation that demonstrates your feature]
+
 ## Graphical User Interface
-The GUI is created from the python GUI toolkit called Tkinter. The interface is divided into 3 simple areas. First it the text widget, this is where the conversation is displayed. It is vertically scrollable allowing the user to see the conversation history. The second part is the message entry box. This is where the user enters their messages. Finally we have an enter button for the user to click to submit their message. The user can also simply press the enter key instead. The color pallete was designed to have a calming effext. The GUI makes calls to the main.py program to generated responses.
+The GUI is created from the python GUI toolkit called Tkinter. The interface is divided into 3 simple areas. First it the text widget, this is where the conversation is displayed. It is vertically scrollable allowing the user to see the conversation history. The second part is the message entry box. This is where the user enters their messages. Finally we have an enter button for the user to click to submit their message. The user can also simply press the enter key instead. The color pallete was designed to have a calming effext. The GUI makes calls to the main.py program to generated responses. It improves the overall system by providing ease of use and a relaxing aesthetic. 
 
 Source: https://docs.python.org/3/library/tkinter.html
+
+### Features in this Assignment
+* Synonym Recognition (10 points) (see above for explanation)
+* Machine Learning (10 points) (see above for explanation)
+* Graphical User Interface (5 points) (see above for explanation)
