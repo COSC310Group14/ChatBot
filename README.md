@@ -20,7 +20,7 @@ Machine Learning was used to train a model which can recognize certain patterns 
 
 The model is traind with TensorFlow's Natural Language Toolkit.
 
-![Screenshot](machine learning example.png)
+![Screenshot](mlExample.PNG)
 
 ## Synonym Recognition
 Synonyms are used to improve upon the accuracy of the chatbot. By adding the synonyms one can answer the questions asked by the user that don’t really match the questions fed by you. This way, the bot can identify the intent and provide the right answer even when the question asked is not an exact match. For example if the user enters " I am feeling gloomy", the bot is not hardcoded to find the word gloomy and relate it to depression, but the synonym recognition script will find all the synonyms of gloomy and iterate through those synonimous phrases until it can understand something. In this case the phrase understood by the bot would be " I am feeling depressed".
