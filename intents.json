@@ -15,7 +15,7 @@
          "context_set": ""
         },
         {"tag": "depression",
-         "patterns": ["I am feeling depressed", "I feel empty", "I think I am depressed", "I am experiencing depression"],
+         "patterns": ["I am feeling depressed", "depression", "depressed","Im feeling depressed", "I feel empty", "I think I am depressed", "I am experiencing depression"],
          "responses": ["Would you like to hear some techniques to deal with depression?", "Depression huh, would you like to hear some coping techniques?"],
          "context_set": ""
         },

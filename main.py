@@ -81,8 +81,9 @@ def get_response(inp):
     #find synonyms
     synonimousPhrases = findSynonyms(inp)
     synonimousPhrases.insert(0, inp)
-
+    print(synonimousPhrases)
     for phrase in synonimousPhrases:
+        print("phrase: ", phrase)
         global prevTag
         results = model.predict([bag_of_words(phrase, words)])[0]
         results_index = numpy.argmax(results)
