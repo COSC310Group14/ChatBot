@@ -40,5 +40,4 @@ def findSynonyms(input):
         s1.insert(ind, wordMem)
     #print(synonimousSentences)
     return synonimousSentences
-        
-findSynonyms("i feel down")
+
