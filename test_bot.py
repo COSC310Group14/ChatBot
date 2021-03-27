@@ -18,13 +18,13 @@ class TestCalc(unittest.TestCase):
         self.assertTrue(get_response("Goodbye") in responses)
 
 
-    # tests input for response in depression tag
+    # tests input for response in depression tag 
+    # test using synonyms 
     def test_depression(self):
         responses2 = data['intents'][3]['responses']
-        self.assertTrue(get_response("I am feeling depressed") in responses2)
+        self.assertTrue(get_response("I am feeling gloomy") in responses2)
 
-
-        
+    
 
 
 if __name__ == '__main__':
