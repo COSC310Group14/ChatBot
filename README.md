@@ -35,7 +35,18 @@ The GUI is created from the python GUI toolkit called Tkinter. The interface is 
 
 Source: https://docs.python.org/3/library/tkinter.html
 
+### Automated Unit Testing 
+
+The unit tests were created using PyUnit. The unittest framkework was imported into the tes_bot.py file.
+Each unittest uses assert statements to verify if the output obtained is the one desired. Our unit tests use assertTrue to verify if a boolean statement returns a True value. The test will pass only if the value returned by the function is true.  Our  tests validate the get_response() function in the main.py file. The two first tests identify if the response of the ML model is within the accepted set of resposes provided in the intents.json file.  The final test verifies if the synonym identifier is working properly and uses asserTrue as well to verify the response. 
+
+
+
+
+
+
 ### Features in this Assignment
 * Synonym Recognition (10 points) (see above for explanation)
 * Machine Learning (10 points) (see above for explanation)
 * Graphical User Interface (5 points) (see above for explanation)
+
