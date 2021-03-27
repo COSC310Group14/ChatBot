@@ -149,6 +149,16 @@
          "responses": ["You should contact professional help!"],
          "context_set": ""
         },
+        {"tag": "becomeAPsychiatrist",
+         "patterns": ["is it hard to become a psychiatrist", "how can i become a psychiatrist", "can you help me become a psychiatrist", "what do i need to become a psychiatrist", "what is the best way to become a psychiatrist"],
+         "responses": ["To become a psychiatrist it usually takes at least 6 years, you will need your MD and a Diploma to be officially recognized."],
+         "context_set": ""
+        },
+        {"tag": "beingAPsychiatrist",
+         "patterns": ["what is it like to be a psychiatrist", "do you like being psychiatrist", "what is fun about being psychiatrist", "what is the worst part about being a psychiatrist"],
+         "responses": ["Being a psychiatrist can be stressful and fun at the same time. There is a always high earnings potential for psychiatrists and an excellent job market. However, the stress that can come from dealing with some clients may outweigh thoes benifits."],
+         "context_set": ""
+        },
         {"tag": "trauma",
          "patterns": ["i experienced a traumatic event", "i felt trauma", "it was traumatic"],
          "responses": ["Its best if you speak to a real mental health professional about traumatic events as they can be nuanced and many important factors in recovery can be overlooked."],

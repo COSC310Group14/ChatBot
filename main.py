@@ -49,7 +49,7 @@ def chat():
                     handleExplain()
                 prevTag = tag
             else:
-                print(errorString)
+                print(getErrorString())
 
 
 def isInputYesOrNo(tag):
@@ -62,7 +62,7 @@ def handleYesOrNoInput(tag, previousTag):
     try:
         s = actionChart[previousTag][tag]
     except:
-        s = errorString
+        s = getErrorString()
     prevTag = 'None'
     return s
 
